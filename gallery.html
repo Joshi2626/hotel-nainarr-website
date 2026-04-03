@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery – Hotel Nainarr</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* Lightbox overlay */
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.88);
+      z-index: 9999;
+      align-items: center;
+      justify-content: center;
+    }
+    .lightbox.active {
+      display: flex;
+    }
+    .lightbox img {
+      max-width: 90vw;
+      max-height: 85vh;
+      object-fit: contain;
+      border-radius: 8px;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.5);
+    }
+    .lightbox-close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 2.5rem;
+      color: #fff;
+      cursor: pointer;
+      line-height: 1;
+      background: none;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">Hotel Nainarr</div>
+    <div class="hamburger" aria-label="Toggle menu" role="button" tabindex="0">
+      <span></span><span></span><span></span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="rooms.html">Rooms</a></li>
+      <li><a href="amenities.html">Amenities</a></li>
+      <li><a href="dining.html">Dining</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="location.html">Location</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <h1>Photo Gallery</h1>
+    <p>A glimpse into the comfort and elegance of Hotel Nainarr</p>
+  </div>
+
+  <!-- GALLERY -->
+  <section class="section">
+    <div class="section-title">
+      <h2>Our Hotel in Pictures</h2>
+      <p>Click any image to view it in full size</p>
+      <div class="divider"></div>
+    </div>
+
+    <div class="gallery-grid">
+      <img src="images/King Suite 1.jpg" alt="King Suite" onclick="openLightbox(this.src)" />
+      <img src="images/King Suite 2.jpg" alt="King Suite view" onclick="openLightbox(this.src)" />
+      <img src="images/King Suite 3.jpg" alt="King Suite interior" onclick="openLightbox(this.src)" />
+      <img src="images/Executive double room 2.jpg" alt="Executive Double Room" onclick="openLightbox(this.src)" />
+      <img src="images/Executive double room 3.jpg" alt="Executive Double Room view" onclick="openLightbox(this.src)" />
+      <img src="images/Executive double room 4.jpg" alt="Executive Double Room interior" onclick="openLightbox(this.src)" />
+      <img src="images/Executive Royal 1.jpg" alt="Executive Royal Room" onclick="openLightbox(this.src)" />
+      <img src="images/Executive Royal 2.jpg" alt="Executive Royal Room view" onclick="openLightbox(this.src)" />
+      <img src="images/Queen Suite 1.jpg" alt="Queen Suite" onclick="openLightbox(this.src)" />
+      <img src="images/fam bed 1.jpg" alt="Family Room" onclick="openLightbox(this.src)" />
+      <img src="images/fam bed 2.jpg" alt="Family Room view" onclick="openLightbox(this.src)" />
+    </div>
+  </section>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+    <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close">&times;</button>
+    <img id="lightboxImg" src="" alt="Gallery image" />
+  </div>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <h2>Like What You See?</h2>
+    <p>Book your stay at Hotel Nainarr and experience it in person.</p>
+    <a href="contact.html" class="btn">Book Now</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>Hotel Nainarr</h4>
+        <p>Your home away from home in Tuticorin, Tamil Nadu. Premium comfort, warm hospitality.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="rooms.html">Rooms</a>
+        <a href="amenities.html">Amenities</a>
+        <a href="dining.html">Dining</a>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <a href="gallery.html">Gallery</a>
+        <a href="location.html">Location</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>📍 Tuticorin, Tamil Nadu, India</p>
+        <p>📞 0461 235 5524</p>
+        <p>✉️ hotelnainarr@gmail.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Hotel Nainarr, Tuticorin. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script>
+    function openLightbox(src) {
+      document.getElementById('lightboxImg').src = src;
+      document.getElementById('lightbox').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    // Close on backdrop click
+    document.getElementById('lightbox').addEventListener('click', function (e) {
+      if (e.target === this) closeLightbox();
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') closeLightbox();
+    });
+  </script>
+</body>
+</html>

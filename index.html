@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hotel Nainarr – Official Website</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">Hotel Nainarr</div>
+    <div class="hamburger" aria-label="Toggle menu" role="button" tabindex="0">
+      <span></span><span></span><span></span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="rooms.html">Rooms</a></li>
+      <li><a href="amenities.html">Amenities</a></li>
+      <li><a href="dining.html">Dining</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="location.html">Location</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Experience Comfort &amp; Convenience at Hotel Nainarr</h1>
+      <p>Well-appointed rooms, premium dining, high-speed Wi-Fi, and modern amenities await you.</p>
+
+      <!-- BOOKING FORM -->
+      <form class="booking-form" id="bookingForm">
+        <div class="form-group">
+          <label for="checkin">Check-In</label>
+          <input type="date" id="checkin" name="checkin" />
+        </div>
+        <div class="form-group">
+          <label for="checkout">Check-Out</label>
+          <input type="date" id="checkout" name="checkout" />
+        </div>
+        <div class="form-group">
+          <label for="guests">Guests</label>
+          <select id="guests" name="guests">
+            <option value="">Select</option>
+            <option value="1">1 Guest</option>
+            <option value="2">2 Guests</option>
+            <option value="3">3 Guests</option>
+            <option value="4">4 Guests</option>
+            <option value="5">5+ Guests</option>
+          </select>
+        </div>
+        <button type="submit" class="btn">Check Availability</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- HIGHLIGHTS -->
+  <section class="section">
+    <div class="section-title">
+      <h2>Why Choose Hotel Nainarr?</h2>
+      <p>Everything you need for a perfect stay in Tuticorin</p>
+      <div class="divider"></div>
+    </div>
+    <div class="highlights-grid">
+      <div class="highlight-card">
+        <div class="icon">📶</div>
+        <h3>High-Speed Wi-Fi</h3>
+        <p>Stay connected with complimentary high-speed internet throughout the hotel.</p>
+      </div>
+      <div class="highlight-card">
+        <div class="icon">🍽️</div>
+        <h3>Premium Restaurant</h3>
+        <p>Savour authentic South Indian cuisine and multi-cuisine delights.</p>
+      </div>
+      <div class="highlight-card">
+        <div class="icon">🚗</div>
+        <h3>Free Parking</h3>
+        <p>Ample secure parking space available for all guests.</p>
+      </div>
+      <div class="highlight-card">
+        <div class="icon">🕐</div>
+        <h3>24/7 Service</h3>
+        <p>Our front desk and room service team is available around the clock.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED ROOMS -->
+  <section class="section section-alt">
+    <div class="section-title">
+      <h2>Featured Rooms</h2>
+      <p>Thoughtfully designed spaces for your comfort</p>
+      <div class="divider"></div>
+    </div>
+    <div class="rooms-grid">
+
+      <div class="room-card">
+        <img src="images/Executive double room 2.jpg" alt="Executive Double Room" />
+        <div class="room-card-body">
+          <h3>Executive Double Room</h3>
+          <ul class="room-features">
+            <li>168 sq ft · 2 Adults</li>
+            <li>King-size bed</li>
+            <li>Air conditioning</li>
+            <li>Free Wi-Fi</li>
+          </ul>
+          <div class="room-price">₹ On Request <span>/ night</span></div>
+          <button class="btn book-now-btn">Book Now</button>
+        </div>
+      </div>
+
+      <div class="room-card">
+        <img src="images/King Suite 1.jpg" alt="King Suite" />
+        <div class="room-card-body">
+          <h3>King Suite</h3>
+          <ul class="room-features">
+            <li>340 sq ft · 2 Adults</li>
+            <li>Luxury king bed</li>
+            <li>Separate living area</li>
+            <li>Premium toiletries</li>
+          </ul>
+          <div class="room-price">₹ On Request <span>/ night</span></div>
+          <button class="btn book-now-btn">Book Now</button>
+        </div>
+      </div>
+
+      <div class="room-card">
+        <img src="images/fam bed 1.jpg" alt="Family 4 Bed Room" />
+        <div class="room-card-body">
+          <h3>Family 4 Bed Room</h3>
+          <ul class="room-features">
+            <li>660 sq ft · Family</li>
+            <li>4 comfortable beds</li>
+            <li>Spacious layout</li>
+            <li>Room service</li>
+          </ul>
+          <div class="room-price">₹ On Request <span>/ night</span></div>
+          <button class="btn book-now-btn">Book Now</button>
+        </div>
+      </div>
+
+    </div>
+    <div style="text-align:center; margin-top:36px;">
+      <a href="rooms.html" class="btn btn-outline">View All Rooms</a>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <h2>Ready for an Unforgettable Stay?</h2>
+    <p>Book your room today and experience the warmth of Hotel Nainarr in Tuticorin.</p>
+    <a href="contact.html" class="btn">Contact Us to Book</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>Hotel Nainarr</h4>
+        <p>Your home away from home in Tuticorin, Tamil Nadu. Premium comfort, warm hospitality.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="rooms.html">Rooms</a>
+        <a href="amenities.html">Amenities</a>
+        <a href="dining.html">Dining</a>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <a href="gallery.html">Gallery</a>
+        <a href="location.html">Location</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>📍 Tuticorin, Tamil Nadu, India</p>
+        <p>📞 0461 235 5524</p>
+        <p>✉️ hotelnainarr@gmail.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Hotel Nainarr, Tuticorin. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
